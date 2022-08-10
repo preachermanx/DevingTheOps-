@@ -112,6 +112,20 @@ This is \col{blue}{in blue} or \col{#bf37bc}{in #bf37bc}.
 
 ### A quick note on whitespaces
 
+@def hasplotly = true
+~~~
+<div id="tester" style="width:600px;height:350px;"></div>
+
+<script>
+    TESTER = document.getElementById('tester');
+    Plotly.newPlot( TESTER, [{
+    x: [1, 2, 3, 4, 5],
+    y: [1, 2, 4, 8, 16] }], {
+    margin: { t: 0 } } );
+</script>
+~~~
+
+
 For most commands you will use `#k` to refer to the $k$-th argument as in LaTeX.
 In order to reduce headaches, this forcibly introduces a whitespace on the left of whatever is inserted which, usually, changes nothing visible (e.g. in a math settings).
 However there _may be_ situations where you do not want this to happen and you know that the insertion will not clash with anything else.
